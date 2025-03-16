@@ -14,6 +14,8 @@ h1 {
 
 body {
   background: linear-gradient(to bottom, #615dad, #ffc8da);
+  min-height: 100vh;
+  padding-top: 70px;
 }
 
 
@@ -27,10 +29,7 @@ body {
   overflow: hidden;
   background-color: #283e50;
   border-radius: 3% 3% 0 0;
-  position: relative;
-  left: 50%;
-  translate: -50%;
-  margin: 70px 0 80px 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -61,8 +60,7 @@ body {
 
 .game-button--rules {
   background-color: #1fcca4;
-
-  border-bottom: 1px rgb(114, 114, 114) solid;
+  border-bottom: 1px solid rgb(114, 114, 114);
 }
 
 .game-button--start {

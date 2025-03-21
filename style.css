@@ -1,8 +1,16 @@
-* {
+html {
   box-sizing: border-box;
-  color: white;
 }
 
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  color: white;
+}
 
 h1 {
   font-family: Lobster, sans-serif;

@@ -28,7 +28,7 @@ body {
 
 .game-image {
   height: 230px;
-  background-image: url("uvodni.jpg");
+  background-image: url("images/uvodni.jpg");
   background-position: center;
   background-size: cover;
 }

@@ -83,3 +83,7 @@ body {
   background-color: #0090e9;
   cursor: pointer;
 }
+
+a {
+  text-decoration-line: none;
+}

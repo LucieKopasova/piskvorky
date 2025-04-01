@@ -87,3 +87,43 @@ body {
 a {
   text-decoration-line: none;
 }
+
+/* ------------------------------------------------------------------ */
+
+.game-body {
+  margin: 0 auto;
+  max-width: 80vmin;
+}
+
+.game-menu {
+  display: flex;
+  justify-content: space-between
+}
+
+
+.home {
+  background-color: #1cbb96;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.play-again {
+  background-color: #2063af;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.play-area {
+  background-color: rgba(255, 255, 255, 0.4);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+}
+
+
+.play-field {
+  border: 1px solid black;
+  padding-top: 100%;
+
+}

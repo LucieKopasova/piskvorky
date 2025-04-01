@@ -65,6 +65,10 @@ body {
 
 .game-button--rules {
   background-color: #1fcca4;
+
+}
+
+.game-button--border {
   border-bottom: 1px solid rgb(114, 114, 114);
 }
 
@@ -97,33 +101,55 @@ a {
 
 .game-menu {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: center;
+
 }
 
+.game-name.game-name--play-area {
+  text-align: center;
+  margin: 0
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.player__symbol {
+  margin: 10px;
+}
+
+.play-button img {
+  margin: 3px;
+}
 
 .home {
-  background-color: #1cbb96;
   padding: 5px;
   border-radius: 10%;
 }
 
 .play-again {
-  background-color: #2063af;
   padding: 5px;
   border-radius: 10%;
 }
 
 .play-area {
-  background-color: rgba(255, 255, 255, 0.4);
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
+  border: 1px solid black;
 
 }
 
 
 .play-field {
-  border: 1px solid black;
+  border: 1px solid rgb(94, 93, 93);
   padding-top: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
+.play-field:hover,
+.play-field:focus {
+  background-color: rgba(255, 255, 255, 0.6);
 }

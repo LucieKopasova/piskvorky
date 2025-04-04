@@ -145,8 +145,8 @@ a {
 
 .play-field {
   border: 1px solid rgb(94, 93, 93);
-  padding-top: 100%;
   background-color: rgba(255, 255, 255, 0.4);
+  aspect-ratio: 1 / 1;
 }
 
 .play-field:hover,

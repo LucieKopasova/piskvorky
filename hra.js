@@ -1,31 +1,34 @@
 let currentPlayer = 'circle';
 
 const playFieldEl = document.querySelectorAll('.play-field');
-
-/* const circleWhite = {
-  class: 'player__symbol player__symbol--circle',
-  src: 'images/circle--white.svg',
-  alt: 'circle',
-};
-
-const crossWhite = {
-  class: 'player__symbol player__symbol--cross',
-  src: 'images/cross--white.svg',
-  alt: 'cross',
-}; */
+let playSymbolEl = document.querySelector('#player__symbol');
 
 const addcircle = (e) => {
   if (currentPlayer === 'circle') {
     e.target.classList.add('board__field--circle');
-
     currentPlayer = 'cross';
+    setTimeout(() => {
+      playSymbolEl.src = 'images/cross--white.svg';
+    }, 300);
   } else if (currentPlayer === 'cross') {
     e.target.classList.add('board__field--cross');
     currentPlayer = 'circle';
+    setTimeout(() => {
+      playSymbolEl.src = 'images/circle--white.svg';
+    }, 300);
   }
   e.target.disabled = true;
 };
 
 playFieldEl.forEach((addclick) => {
   addclick.addEventListener('click', addcircle);
+});
+
+document.querySelector('.play-again').addEventListener('click', () => {
+  const userConfirm = confirm('Opravdu chceš začít znovu?');
+  if (userConfirm === true) {
+    window.location.reload();
+  } else if (userConfirm === false) {
+    event.preventDefault();
+  }
 });

@@ -92,7 +92,7 @@ a {
   text-decoration-line: none;
 }
 
-/* ------------------------------------------------------------------ */
+/* ---------Hrací plocha------------------------------------------ */
 
 .game-body {
   margin: 0 auto;
@@ -119,6 +119,8 @@ a {
 .player__symbol {
   margin: 10px;
 }
+
+
 
 .play-button img {
   margin: 3px;
@@ -147,9 +149,30 @@ a {
   border: 1px solid rgb(94, 93, 93);
   background-color: rgba(255, 255, 255, 0.4);
   aspect-ratio: 1 / 1;
+  padding: 15%;
 }
 
 .play-field:hover,
 .play-field:focus {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ---------Hráči JS------------------------------------------ */
+
+
+.board__field--circle {
+  background-image: url(images/circle--black.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+
+}
+
+.board__field--cross {
+  background-image: url(images/cross--black.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+
 }

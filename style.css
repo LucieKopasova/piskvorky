@@ -163,16 +163,30 @@ a {
 
 .board__field--circle {
   background-image: url(images/circle--black.svg);
-  background-size: contain;
+  background-size: 10%;
   background-repeat: no-repeat;
+  background-position: center;
   background-origin: content-box;
+  transition: background-size 0.3s ease;
+}
+
+.board__field--circle.expand {
+  background-size: 100%;
+
 
 }
 
 .board__field--cross {
   background-image: url(images/cross--black.svg);
-  background-size: contain;
+  background-size: 10%;
   background-repeat: no-repeat;
+  background-position: center;
   background-origin: content-box;
+  transition: background-size 0.15s ease;
+}
+
+.board__field--cross.expand {
+  background-size: 100%;
+
 
 }

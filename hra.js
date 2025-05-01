@@ -1,6 +1,8 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'circle';
 
-const playFieldsEl = document.querySelectorAll('.play-field'); // pojmenoval bych
+const playFieldsEl = document.querySelectorAll('.play-field');
 let playSymbolEl = document.querySelector('#player__symbol');
 
 const addcircle = (e) => {
@@ -22,6 +24,36 @@ const addcircle = (e) => {
     e.target.classList.add('expand');
   }, 10);
   e.target.disabled = true;
+
+  const playAreaStatuts = Array.from(
+    document.querySelectorAll('.play-field'),
+  ).map((field) => {
+    if (field.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (field.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  console.log(playAreaStatuts);
+
+  const winner = findWinner(playAreaStatuts);
+  if (winner === 'o' || winner === 'x') {
+    playFieldsEl.forEach((field) => {
+      field.classList.add('game-over');
+    });
+    setTimeout(() => {
+      alert(`Vyhrál hráč se symbolem ${winner}.`);
+      window.location.reload();
+    }, 400);
+  } else if (!playAreaStatuts.includes('_')) {
+    setTimeout(() => {
+      alert(`Hra skončila nerozhodně.`);
+      window.location.reload();
+    }, 400);
+  }
 };
 
 playFieldsEl.forEach((field) => {
